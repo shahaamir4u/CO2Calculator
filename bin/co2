@@ -1,6 +1,0 @@
-#!/usr/bin/env node
-//require = require('esm')(module /*, options */);
-const cli = require('../src/cli')
-cli.cli(process.argv);
-
-console.log(process.argv.slice(2));
