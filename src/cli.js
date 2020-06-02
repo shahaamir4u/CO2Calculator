@@ -2,7 +2,7 @@ const request = require('request');
 const constants = require('./constants');
 const API_KEY = process.env.ORS_TOKEN;
 
-
+// gets the city coordinates
 async function getCityCoordinates(cityName) {
     return new Promise(function (resolve, reject) {
         request({
@@ -31,7 +31,7 @@ async function getCityCoordinates(cityName) {
 }
 
 
-
+// gets the distance between cities
 async function getDistance(startCity, endCity) {
     return new Promise(function (resolve, reject) {
         let startCityCoordinates = startCity;
@@ -55,7 +55,6 @@ async function getDistance(startCity, endCity) {
                 return resolve(dist);
 
             } else {
-                console.log(data.error.message);
                 return resolve('Location not exist');
             }
         });
@@ -64,19 +63,19 @@ async function getDistance(startCity, endCity) {
 
 }
 
+// calls the API with city name and transportation-method
 async function execute(options) {
-    console.log('Please wait...');
     let startCoordinates = await getCityCoordinates(options.start);
     let endCoordinates = await getCityCoordinates(options.end);
     let co2Factor = constants[options.transportation];
-    
+
     if (startCoordinates != 'Location not exist' && endCoordinates != 'Location not exist') {
         let distanceKms = await getDistance(startCoordinates, endCoordinates);
         if (distanceKms == 'Location not exist')
             console.log('Use another means of transportation, route not possible.');
         else {
             let co2Value = getCo2ValueCausedByVechile(distanceKms, co2Factor);
-            console.log("Your trip caused", co2Value, "kg of CO2-equivalent.");
+            console.log("Your trip caused "+ co2Value + "kg of CO2-equivalent.");
         }
 
     } else {
@@ -84,6 +83,7 @@ async function execute(options) {
     }
 }
 
+// gets the CO2-equivalent based on distance and transportation-method
 function getCo2ValueCausedByVechile(distanceKms, co2Factor) {
     let value = (distanceKms * co2Factor / 1000).toFixed(1);
     return value;
