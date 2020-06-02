@@ -19,10 +19,10 @@ async function getCityCoordinates(cityName) {
                     coord = data.features[0].geometry.coordinates;
                     return resolve(coord);
                 } else
-                    return resolve('Address not found');
+                    return resolve('Location not exist');
             } else {
-                console.log('Address not found1');
-                return resolve('Address not found');
+                console.log('Coordinates not exist');
+                return resolve('Location not exist');
             }
         });
 
@@ -56,7 +56,7 @@ async function getDistance(startCity, endCity) {
 
             } else {
                 console.log(data.error.message);
-                return resolve('Address not found');
+                return resolve('Location not exist');
             }
         });
 
@@ -66,13 +66,16 @@ async function getDistance(startCity, endCity) {
 
 async function execute(options) {
     console.log('Please wait...');
+    console.log(typeof options);
     let startCoordinates = await getCityCoordinates(options.start);
     let endCoordinates = await getCityCoordinates(options.end);
-    let co2Factor = constants[options.transportation]
+    let co2Factor = constants[options.transportation];
+    console.log(startCoordinates);
+    console.log(endCoordinates);
 
-    if (startCoordinates != 'Address not found' && endCoordinates != 'Address not found') {
+    if (startCoordinates != 'Location not exist' && endCoordinates != 'Location not exist') {
         let distanceKms = await getDistance(startCoordinates, endCoordinates);
-        if (distanceKms == 'Address not found')
+        if (distanceKms == 'Location not exist')
             console.log('Use another means of transportation, route not possible.');
         else {
             let co2Value = getCo2ValueCausedByVechile(distanceKms, co2Factor);

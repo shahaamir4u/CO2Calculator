@@ -2,7 +2,7 @@
   "name": "co2-calculator",
   "version": "1.0.0",
   "description": "A CLI for CO2 calculator",
-  "main": "src/cli.js",
+  "main": "src/co2-calculator.js",
   "bin": {
     "co2-calculator": "bin/co2-calculator.js"
   },
@@ -11,9 +11,9 @@
   },
   "scripts": {
     "test": "mocha",
-    "start": "node bin/co2-calculator.js"
+    "start": "node bin/co2-calculator.js",
+    "install-link": "npm install && npm link"
   },
-  "keywords": [],
   "author": "Aamir Shah",
   "license": "ISC",
   "dependencies": {
