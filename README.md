@@ -35,7 +35,7 @@ Then you need to set the generated key in your environment variable ORS_TOKEN of
 
 The above **commands** will inform the user how to use the program using the command **co2-calculator**. 
 
-Please use the following *commands* to run various scenarios as:
+Please use the following *command examples* to run various scenarios as:
 1.  To check CO2 equivalent between to cities.\
    *co2-calculator --start "delhi" --end "bangalore" --transportation-method large-petrol-car*\
     Output: Your trip caused 589.5 kg of CO2-equivalent.
