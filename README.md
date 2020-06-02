@@ -18,8 +18,8 @@ Please get the API generated from the following [openrouteservice](https://openr
 Then you need to set the generated key in your environment variable ORS_TOKEN of your system.
 
 ## Install
-
-     Use the zip file shared and unzip it.
+Use the zip file shared and unzip it.
+     
      cd <To the folder where you unzipped the file>
      npm run install-link
 
