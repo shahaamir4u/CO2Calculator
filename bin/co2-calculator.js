@@ -4,6 +4,7 @@ const arg = require('arg');
 const constants = require('../src/constants');
 
 
+//  prints the help text 
 const usage = function () {
     const usageText = `
     co2-calculator will calculate CO2 equivalent consumption for your trip.
@@ -42,6 +43,7 @@ const usage = function () {
     console.log(usageText)
 }
 
+// execute the program with valid parsed arguments
 function executeScenario() {
     let options = parseArgumentsIntoOptions(process.argv);
     if (checkforValidArgs(options) && isValidTransportationMode(options)) {
@@ -52,6 +54,7 @@ function executeScenario() {
     }
 }
 
+// checks if the transportation-method is valid
 function isValidTransportationMode(options) {
     let status = true;
     try {
@@ -64,6 +67,7 @@ function isValidTransportationMode(options) {
     return status;
 }
 
+// checks if the arguments have proper values
 function checkforValidArgs(options) {
     let status = true;
     try {
@@ -80,6 +84,7 @@ function checkforValidArgs(options) {
     return status;
 }
 
+// parse the raw arguments  
 function parseArgumentsIntoOptions(rawArgs) {
     try {
         const args = arg(
