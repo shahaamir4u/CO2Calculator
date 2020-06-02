@@ -31,6 +31,8 @@ Then you need to set the generated key in your environment variable ORS_TOKEN of
 ## Running the project
 
     npm start
+       or
+    co-calculator
 
 
 Please use the following *commands* to run various scenarios.
