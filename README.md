@@ -9,13 +9,13 @@ Just go on [official Node.js website](https://nodejs.org/) and download the inst
 If the installation was successful, you should be able to run the following command.
 
     node --version
-    v8.11.3
+    v10.16.3
 
     npm --version
-    6.1.0
+    6.9.0
 
 ## API Key
-Please get the API generated from the following [openrouteservice] (https://openrouteservice.org/)
+Please get the API generated from the following [openrouteservice](https://openrouteservice.org/)
 Then you need to set the generated key in your environment variable ORS_TOKEN of your system.
 
 ## Install
