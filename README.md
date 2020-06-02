@@ -32,7 +32,7 @@ Then you need to set the generated key in your environment variable ORS_TOKEN of
 
     npm start
        or
-    co-calculator
+    co2-calculator
 
 
 Please use the following *commands* to run various scenarios.
