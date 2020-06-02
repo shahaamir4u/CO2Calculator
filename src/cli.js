@@ -66,13 +66,10 @@ async function getDistance(startCity, endCity) {
 
 async function execute(options) {
     console.log('Please wait...');
-    console.log(typeof options);
     let startCoordinates = await getCityCoordinates(options.start);
     let endCoordinates = await getCityCoordinates(options.end);
     let co2Factor = constants[options.transportation];
-    console.log(startCoordinates);
-    console.log(endCoordinates);
-
+    
     if (startCoordinates != 'Location not exist' && endCoordinates != 'Location not exist') {
         let distanceKms = await getDistance(startCoordinates, endCoordinates);
         if (distanceKms == 'Location not exist')
