@@ -1,5 +1,6 @@
 ### CO2-Calculator
 A program to calculate the CO2 consumption based on the start and end cities.
+The program was tested on Windows.
 
 ### Node
 - #### Node installation on Windows
