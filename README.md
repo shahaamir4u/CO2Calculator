@@ -14,7 +14,7 @@ If the installation was successful, you should be able to run the following comm
     6.9.0
 
 ## API Key
-Please get the API generated from the following [openrouteservice](https://openrouteservice.org/)
+Please get the API key generated from the following [openrouteservice website](https://openrouteservice.org/)
 Then you need to set the generated key in your environment variable ORS_TOKEN of your system as described in [here](https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html)
 
 ## Install
