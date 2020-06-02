@@ -15,7 +15,7 @@ If the installation was successful, you should be able to run the following comm
 
 ## API Key
 Please get the API generated from the following [openrouteservice](https://openrouteservice.org/)
-Then you need to set the generated key in your environment variable ORS_TOKEN of your system.
+Then you need to set the generated key in your environment variable ORS_TOKEN of your system as described in [here](https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html)
 
 ## Install
 Use the zip file shared and unzip it.
