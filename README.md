@@ -29,17 +29,17 @@ Use the zip file shared and unzip it.
     
 Following unit tests are covered.
 
-Tests for C02 Value for delhi and bangalore with large-petrol-car
+    Tests for C02 Value for delhi and bangalore with large-petrol-car
     √ Should return 263.4 kg CO2-equivalent
     √ Should not return 263.38 kg CO2-equivalent.
 
-  Tests for city coordinates of delhi
+    Tests for city coordinates of delhi
     √ Should return [77.184029, 28.709498] as coordinates for delhi
 
-  Tests for city coordinates of not valid city bangaloreNot
+    Tests for city coordinates of not valid city bangaloreNot
     √ Should return Location not exist as coordinates for bangaloreNot
 
-  Tests for distance in kms between two cities delhi and bangalore
+    Tests for distance in kms between two cities delhi and bangalore
     √ Should return 2090.498 distance between delhi and bangalore
 
 ## Running the CLI
