@@ -1,4 +1,4 @@
-### CO2Calculator
+### CO2-Calculator
 A program to calculate the CO2 consumption based on the start and end cities
 
 Following are the pre-requisities for the program.
@@ -32,4 +32,15 @@ Then you need to set the generated key in your environment variable ORS_TOKEN of
 
     npm start
 
+Please use the following commands to run various scenarios.
+1. To check CO2 equivalent between to cities
+co2-calculator --start "delhi" --end "bangalore" --transportation-method large-petrol-car
+Output: Your trip caused 589.5 kg of CO2-equivalent.
 
+2. To check CO2 equivalent between to cities with one invalid city
+co2-calculator --start "delhi" --end "bangaloreNOT" --transportation-method large-petrol-car
+Output: The route doesn't exist between start and end cities. Please try with other cities.
+
+3. To check CO2 equivalent between to cities where route not possible
+co2-calculator --start "delhi" --end "New York" --transportation-method large-petrol-car
+Output: Use another means of transportation, route not possible.
