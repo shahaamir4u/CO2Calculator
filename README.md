@@ -1,5 +1,5 @@
 ### CO2-Calculator
-A program to calculate the CO2 consumption based on the start and end cities
+A program to calculate the CO2 consumption based on the start and end cities.
 
 Following are the pre-requisities for the program.
 ### Node
@@ -34,6 +34,7 @@ Then you need to set the generated key in your environment variable ORS_TOKEN of
        or
     co2-calculator
 
+The above commands will inform the user how to use the program. 
 
 Please use the following *commands* to run various scenarios.
 1.  To check CO2 equivalent between to cities.\
