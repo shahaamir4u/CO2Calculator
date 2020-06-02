@@ -28,12 +28,44 @@ Use the zip file shared and unzip it.
     npm run test
     
 ## Running the CLI
+Use one of the ways to start the program:
 
     npm start
-       or
     co2-calculator
 
 The above **commands** will inform the user how to use the program using the command **co2-calculator**. 
+
+ co2-calculator will calculate CO2 equivalent consumption for your trip.
+
+    usage:
+      co2-calculator <options>
+
+      options can be:
+
+      --start:                 start city of your trip within double quotes
+      --end:                   end city of your trip within double quotes
+      --transportation-method: transportation vehicle of your trip
+
+      Command Example:
+
+      co2-calculator --start "delhi" --end "bangalore" --transportation-method large-petrol-car
+
+      Valid transportation-method can be any of the following:
+
+      small-diesel-car
+      small-petrol-car
+      small-plugin-hybrid-car
+      small-electric-car
+      medium-diesel-car
+      medium-petrol-car
+      medium-plugin-hybrid-car
+      medium-electric-car
+      large-diesel-car
+      large-petrol-car
+      large-plugin-hybrid-car
+      large-electric-car
+      bus
+      train
 
 Please use the following *command examples* to run various scenarios as:
 1.  To check CO2 equivalent between two cities.\
