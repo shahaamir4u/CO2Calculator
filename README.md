@@ -19,9 +19,9 @@ Please get the API key generated from the following [openrouteservice website](h
 Then you need to set the generated key in your environment variable ORS_TOKEN of your system as described in [here](https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html)
 
 ## Install
-Use the zip file shared and unzip it.
+Clone the repository from [github](https://github.com/shahaamir4u/CO2Calculator.git) 
      
-     cd <To the folder where you unzipped the file>
+     cd <To the folder where you unzipped the repo>
      npm run install-link
 
 ## Running the unit test
